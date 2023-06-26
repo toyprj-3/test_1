@@ -1,0 +1,43 @@
+
+body {
+    background-color: #F1EBE9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-logo{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+#main-logo img{
+    width: 10%;
+    height: 10%;
+}
+
+#write-area{
+    display: flex;
+    background-color: white;
+    width: 94%;
+    height: 90%;
+    border-radius: 40px;
+    margin: 0%;
+}
+
+form {
+    width: 100%;
+}
+
+#in_title {
+    padding-top: 30px;
+    padding-left: 50px;
+    width: 100%;
+    height: 100px;
+}
+
+input {
+    font-size: 20px;
+}
