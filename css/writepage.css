@@ -22,7 +22,7 @@ body {
     display: flex;
     background-color: white;
     width: 80%;
-    height: 80vh;
+    height: auto;
     border-radius: 40px;
     margin: 0%;
 }
