@@ -31,13 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',     # 회원가입 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp',
+    'myapp',        # 기본 테스트용 생성 모델
+    'users',        # 사용자 정보 기록 모델
+    # 'apps.accounts',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +125,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# INTERNAL_IPS = [
+#     "127.0.0.1",
+# ]
+
+
+# 사용자 정보 기록 모델 
+AUTH_USER_MODEL = 'users.User'
