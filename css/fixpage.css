@@ -78,6 +78,7 @@ hr {
 }
 
 #buttons {
+  padding: 2vw;
   display: flex;
   flex-direction: row;
   justify-content: right;
