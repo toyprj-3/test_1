@@ -13,13 +13,13 @@
     </div>
     <div id="write-area">
         <form action="">
-            <div id="w-title">
+            <div id="f-title">
                 <textarea name="title" id="title" rows="1"></textarea>
             </div>
 
             <hr>
 
-            <div id="w-content">
+            <div id="f-content">
                 <textarea name="content" id="content"></textarea>
             </div>
 
@@ -28,11 +28,11 @@
             </div>
 
             <div id="buttons">
-                <div class="fix">
+                <div class="fix" onclick="fix()">
                     <button type="submit">수정하기</button>
                 </div>
 
-                <div class="cancel">
+                <div class="cancel" onclick="cancel()">
                     <button>취소</button>
                 </div>
             </div>
@@ -40,5 +40,33 @@
         </form>
     </div>
 </body>
+
+<script>
+
+    function fix()  {
+        var result = confirm("수정하시겠습니까?");
+        if(result){
+            if((document.getElementById("content").value !="") && (document.getElementById("title").value !="")){
+                alert("수정되었습니다.");
+            }
+            if((document.getElementById("title").value =="")){
+                alert("제목을 입력해 주세요.");
+                return;
+            }
+            if((document.getElementById("content").value =="")){
+                alert("내용을 입력해 주세요.");
+                return;
+            }
+        }
+    }
+
+    function cancel() {
+        var back = confirm("글 작성을 취소하시겠습니까?");
+        if(back){
+            alert("메인으로 돌아갑니다.");
+        }
+    }
+    
+</script>
 
 </html>

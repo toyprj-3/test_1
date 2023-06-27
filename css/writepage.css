@@ -80,7 +80,7 @@ hr {
 }
 
 #buttons {
-    padding: 2vw;
+    padding-bottom: 1vw;
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -100,7 +100,7 @@ hr {
     cursor: pointer;
 }
 
-.fix button{
+.publish button{
     background-color: #4C8492;
     color: white
 }
