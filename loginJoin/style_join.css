@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body{
+    width: 1440px;
+    height: 1024px;
+    background: #F1EBE9;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: Noto Sans Symbols;
+    
+}
+
+.join-wrapper{
+    width: 686px;
+    height: 914px;
+    border-radius: 35px;
+    background: rgba(247, 224, 163, 0.53);
+    margin: 55px auto 55px;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.logo {
+    width: 142px;
+    height: 52px;
+    margin-right: 171px;
+    margin-top: 49px;
+    margin-bottom: 23px;
+}
+
+h3 {
+    font-size: 17px;
+    text-align: left;
+    margin-left: 147px;
+    margin-bottom: 22px;
+}
+
+p {
+    text-align: left;
+    margin-left: 148px;
+    margin-bottom: 4px;
+}
+
+#join-form > input{
+    width: 313px;
+    height: 49px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-width: 1px;
+    background-color: #F8F8F8;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+label {
+    text-align: left;
+    display: block;
+    margin-top: 12px;
+    margin-left: 148px;
+}
+
+hr {
+    width: 315px;
+    height: 1px;
+    border: none;
+    background-color: #D4D4D4;
+    margin: 11px 0 22px 0;
+}
+
+#join-form > input[type="submit"]{
+    display: block;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #4C8492;
+    border-style: none;
+    margin: 57px auto 0;
+}
