@@ -7,7 +7,7 @@
         <link href="./css/More.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
-        <img src="logo.png" id="logo" />
+        <img src="./media/logo.png" id="logo" />
         <div class="content">
             <div class="title">🤎 이자벨 임보일기 6 🤎</div>
             <div class="middle">
@@ -17,12 +17,13 @@
                     <span id="view">100</span>
                 </div>
                 <form class="content_btn">
-                    <input type="button" id="fix" value="수정하기"></input>
-                    <input type="button" id="back" value="뒤로가기"></input>
+                    <input type="button" id="fix" value="수정하기" onclick="move_fix()"></input>
+                    <input type="button" id="del" value="삭제하기"></input>
+                    <input type="button" id="back" value="뒤로가기" onclick="location.href='main.html'"></input>
                 </form>
             </div>
             <hr id="line"/>
-            <div id="img"><img src="content_img.jpg" width = "30%" height="60%"></img></div>
+            <div id="img"><img src="./media/content_img.jpg" width = "30%" height="60%"></img></div>
             <div class="text">
                 자벨이를 임보한지 벌써 4개월이 넘었네요...! 저번 평일에는
                 반려동물 운동장에 다녀왔어요! 일산에 있는 건데 생각보다 넓고
@@ -34,5 +35,13 @@
                 있습니다!
             </div>
         </div>
+        <script>
+            function move_fix() {
+                let res = confirm("게시글을 수정하시겠습니까?");
+                if (res == true) {
+                    window.location.href = "fix.html";
+                };
+            }
+        </script>
     </body>
 </html>
