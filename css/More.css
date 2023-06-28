@@ -38,10 +38,21 @@ body {
 .content_btn {
     display: flex;
     flex-direction: row;
-    margin-right: 3%;
+    margin-right: 5%;
 }
 
 #fix {
+    color: #f7e0a3;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 130%;
+    background-color: #f09c67;
+    margin-right: 8%;
+}
+
+#del {
     color: #f7e0a3;
     border: none;
     padding: 10px;
