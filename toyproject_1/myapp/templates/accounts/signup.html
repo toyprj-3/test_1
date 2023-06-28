@@ -8,5 +8,15 @@
 <body>
     <h1>임시 signup 페이지 </h1>
     <!-- http://127.0.0.1:8000/accounts/signup/ 으로 접속  -->
+
+    <!-- 사용자이름부터 전화번호까지 입력하도록 설정한 내용 출력 -->
+    <form actions="" method="POST" enctype="multi/part/for-data">
+        {% csrf_token %}
+        <div>{{ form.as_ul}} </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+
 </body>
 </html>

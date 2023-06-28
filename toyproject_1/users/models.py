@@ -12,7 +12,6 @@ class UserManager(DjangoUserMangager):
         # if not email:
         #     raise ValueError('이메일이 없습니다. 이메일을 꼭 입력해주세요')
         
-        
         user = self.model(username=username, email=email, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
