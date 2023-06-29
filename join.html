@@ -35,11 +35,10 @@
     </div>
     <script>
         var totalCheckbox = document.getElementById('total-check');
-
-        function toggleCheckboxes() {
-            var firstCheckbox = document.getElementById('first-check');
-            var secondCheckbox = document.getElementById('second-check');
+        var firstCheckbox = document.getElementById('first-check');
+        var secondCheckbox = document.getElementById('second-check');
         
+        function toggleCheckboxes() {
             if (totalCheckbox.checked) {
                 firstCheckbox.checked = true;
                 secondCheckbox.checked = true;
@@ -50,10 +49,6 @@
         }
 
         function toggleTotalCheck() {
-            var totalCheckbox = document.getElementById('total-check');
-            var firstCheckbox = document.getElementById('first-check');
-            var secondCheckbox = document.getElementById('second-check');
-            
             if (firstCheckbox.checked && secondCheckbox.checked) {
                 totalCheckbox.checked = true;
             } else {
