@@ -8,8 +8,8 @@
   </head>
 
   <body>
-    <div id="logo">
-      <img src="./media/logo.png" alt="로고 이미지" />
+    <div id="logo" onclick="cancel()">
+      <a href="#"><img src="./media/logo.png" alt="로고 이미지" /></a>
     </div>
     <div id="write-area">
       <form action="">
@@ -65,7 +65,7 @@
     }
 
     function cancel() {
-      var back = confirm("글 작성을 취소하시겠습니까?");
+      var back = confirm("글 수정을 취소하시겠습니까?");
       if (back) {
         alert("이전으로 돌아갑니다.");
         window.location.replace("More.html");
