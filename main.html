@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>지켜줄개</title>
+        <link rel="stylesheet" href="./toyproject_1/static/css/main.css" />
+        <script
+            src="https://kit.fontawesome.com/ca7a2d019a.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="nonfooter">
+            <header>
+                <a href="./main.html"
+                    ><img
+                        src="./toyproject_1/static/images/logo.png"
+                        alt="logo"
+                /></a>
+            </header>
+            <nav>
+                <a href="./login.html"
+                    ><div><i class="fa-solid fa-paw"></i> 로그인</div></a
+                >
+                <a href="./join.html"
+                    ><div><i class="fa-solid fa-paw"></i> 회원가입</div></a
+                >
+                <a href="./create.html"
+                    ><div><i class="fa-solid fa-paw"></i> 글쓰기</div></a
+                >
+            </nav>
+            <div class="container">
+                <div class="item">
+                    <a href="./More.html"><h1>글 제목</h1></a>
+                    <br />
+                    <h5 class="item-info">작성자 | 작성일</h5>
+                    <span class="likes"
+                        >좋아요 <i class="fa-regular fa-heart"></i
+                    ></span>
+                </div>
+
+                <div class="item">
+                    <a href="./More.html"><h1>글 제목</h1></a>
+                    <br />
+                    <h5 class="item-info">작성자 | 작성일</h5>
+                    <span class="likes"
+                        >좋아요 <i class="fa-regular fa-heart"></i
+                    ></span>
+                </div>
+
+                <div class="item">
+                    <a href="./More.html"><h1>글 제목</h1></a>
+                    <br />
+                    <h5 class="item-info">작성자 | 작성일</h5>
+                    <span class="likes"
+                        >좋아요 <i class="fa-regular fa-heart"></i
+                    ></span>
+                </div>
+
+                <div class="item">
+                    <a href="./More.html"><h1>글 제목</h1></a>
+                    <br />
+                    <h5 class="item-info">작성자 | 작성일</h5>
+                    <span class="likes"
+                        >좋아요 <i class="fa-regular fa-heart"></i
+                    ></span>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p class="footer">&copy; 2023. 지켜줄개 ALL RIGHTS RESERVED.</p>
+        </footer>
+    </body>
+    <script>
+        window.onload = () => {
+            const like = document.querySelector(".fa-regular");
+
+            like.addEventListener("click", (e) => {
+                e.target.classList.toggle("fa-solid");
+            });
+        };
+    </script>
+</html>
