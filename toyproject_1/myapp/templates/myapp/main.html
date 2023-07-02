@@ -20,19 +20,19 @@
                 /></a>
             </header>
             <nav>
-                {% if user.is_not_authenticated %}
+                {% if user.is_authenticated == False %}
                 <a href="{% url 'accounts:login' %}"
                     ><div><i class="fa-solid fa-paw"></i> 로그인</div></a
                 >
                 {% endif %}
-                
+
                 {% if user.is_authenticated %}
                 <a href="./main.html"
                 ><div><i class="fa-solid fa-paw"></i> 로그아웃</div></a
                 >
                 {% endif %}
 
-                {% if user.is_not_authenticated %}
+                {% if user.is_authenticated == False %}
                 <a href="{% url 'accounts:signup' %}"
                     ><div><i class="fa-solid fa-paw"></i> 회원가입</div></a
                 >
