@@ -38,10 +38,12 @@ body {
 .content_btn {
     display: flex;
     flex-direction: row;
+    text-decoration: none;
     margin-right: 5%;
 }
 
 #fix {
+    display: inline-flex;
     color: #f7e0a3;
     border: none;
     padding: 10px;
@@ -52,6 +54,7 @@ body {
 }
 
 #del {
+    display: inline-flex;
     color: #f7e0a3;
     border: none;
     padding: 10px;
@@ -62,6 +65,7 @@ body {
 }
 
 #back {
+    display: inline-flex;
     color: #f7e0a3;
     border: none;
     padding: 10px;
@@ -72,7 +76,7 @@ body {
 }
 
 #fix_a {
-    margin-right: 8%;
+    margin-right: 5%;
 }
 
 #line {
