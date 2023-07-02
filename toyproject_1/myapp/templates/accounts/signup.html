@@ -1,36 +1,12 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>임시 signup 페이지 </h1>
-    <!-- http://127.0.0.1:8000/accounts/signup/ 으로 접속  -->
-
-    <!-- 사용자이름부터 전화번호까지 입력하도록 설정한 내용 출력 -->
-    <!-- <form actions="" method="POST" enctype="multi/part/for-data">
-        {% csrf_token %}
-        <div>{{ form.as_ul}} </div>
-        <div>
-            <input type="submit">
-        </div>
-    </form>
-
-</body>
-</html> -->
-
-
-
-<!-- 프론트에서 작업한 join.html, css 가져옴  -->
+<!-- 프론트에서 작업한 join.html, css 연결  -->
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  href="{% static 'css/join.css' %}"  rel="stylesheet" type="text/css">                   <title>회원가입 페이지 signup.html </title>
+    <link  href="{% static 'css/join.css' %}"  rel="stylesheet" type="text/css">                   
+    <title>회원가입 페이지 signup.html </title>
 </head>
 <body>
     <div class="join-wrapper">  
@@ -38,13 +14,11 @@
         
         <form actions="" method="POST" enctype="multi/part/for-data" id="join-form">
         {% csrf_token %}
-        <!-- <div>{{ form.as_p}} </div> -->
-        <!-- 전체를 보면 비번 입력창이 있는데 하나만 불러오질 못함. -->
         <br><br>
 
         <h3>회원가입</h3>
         <div>
-            <p>이름</p>
+            <p>이름</p> <!-- 실제로 데이터로 저장되는 값 아님  -->
             <!-- {{ form.username}}  -->
             <input type="text" id="name" placeholder="이름을 입력해주세요">
         </div>
@@ -63,9 +37,7 @@
             
         <div>
             <p>비밀번호</p>
-            <!-- 화면에 안나옴 ..  -->
             {{form.password1}}
-            
             <!-- <input type="password" id="password" placeholder="영문/숫자/특수문자를 조합 (10자 이상)"> -->
         </div>
             
@@ -75,15 +47,6 @@
             <!-- <input type="password" id="password2" placeholder="비밀번호를 다시 한 번 입력해주세요"> -->
         </div>
         
-        <!-- <div> <h4>사용자 이름 </h4>
-            {{ form.username}} 
-        </div>
-        
-        <div><h4>사용자 이메일 </h4>
-            {{ form.email}} 
-        </div> -->
-        
-
         <br>
         <label for="agree-check">
             <input type="checkbox" id="total-check" onclick="toggleCheckboxes()"> <span>전체 동의</span>
@@ -98,35 +61,9 @@
         <div>
             <input type="submit" value="회원가입 하기">        
         </div>
-
-        <!-- <form method="post" action="" id="join-form" onsubmit="return join()">
-            <h3>회원가입</h3>
-            <p>이름</p>
-            <input type="text" id="name" placeholder="이름을 입력해주세요">
-            <p>이메일</p>
-            <input type="text" id="email" placeholder="예) likelion@gmail.com">
-            <p>아이디</p>
-            <input type="text" id="ID" placeholder="아이디를 입력해주세요">
-            <p>비밀번호</p>
-            <input type="password" id="password" placeholder="영문/숫자/특수문자를 조합 (10자 이상)">
-            <p>비밀번호 확인</p>
-            <input type="password" id="password2" placeholder="비밀번호를 다시 한 번 입력해주세요">
-            
-            <br>
-            <label for="agree-check">
-                <input type="checkbox" id="total-check" onclick="toggleCheckboxes()"> <span>전체 동의</span>
-                <hr>
-                <input type="checkbox" id="first-check" onclick="toggleTotalCheck()"> <span>서비스 이용약관 동의 (필수)</span>
-                <br>
-                <br>
-                <input type="checkbox" id="second-check" onclick="toggleTotalCheck()"> <span>개인정보 수집 및 이용 동의 (필수)</span>
-            </label>
-            
-            <input type="submit" value="회원가입 하기">
-        </form> -->
     </div>
 
-    <!-- 회원가입 정확히 입력하도록 js처리  -->
+    <!-- 회원가입 체크박스 js처리  -->
     <script>
         var totalCheckbox = document.getElementById('total-check');
         var firstCheckbox = document.getElementById('first-check');

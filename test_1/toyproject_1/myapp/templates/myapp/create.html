@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시물 작성하기</title>
+    <link href="{% static 'css/create.css' %}" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="logo" onclick="cancel()">
+      <a href="{% url 'myapp:list' %}"
+                    > <img src="{% static 'images/logo.png' %}"
+                        alt="logo"/></a>
+    </div>
+    <div id="write-area">
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div id="w-title">
+          <textarea
+            name="title"
+            id="title"
+            rows="1"
+            placeholder="제목을 입력해주세요"
+            required
+          ></textarea>
+        </div>
+
+        <hr />
+
+        <div id="w-content">
+          <textarea
+            name="content"
+            id="content"
+            placeholder="내용을 입력해주세요"
+            required
+          ></textarea>
+        </div>
+
+        <div id="img">
+          <input type="file" name="SelectFile" accept="image" />
+        </div>
+
+        <div id="buttons">
+          <div class="publish" onclick="publish()">
+            <button type="submit">발행하기</button>
+          </div>
+
+          <div class="cancel" onclick="cancel()">
+            <button>취소</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <script>
+    function publish() {
+      var result = confirm("등록하시겠습니까?");
+      if (result) {
+        if (
+          document.getElementById("content").value != "" &&
+          document.getElementById("title").value != ""
+        ) {
+          alert("등록되었습니다.");
+          window.location.replace("main.html");
+        }
+        if (document.getElementById("title").value == "") {
+          alert("제목을 입력해 주세요.");
+          return;
+        }
+        if (document.getElementById("content").value == "") {
+          alert("내용을 입력해 주세요.");
+          return;
+        }
+      } else {
+        return;
+      }
+    }
+
+    function cancel() {
+      var back = confirm("글 작성을 취소하시겠습니까?");
+      if (back) {
+        alert("메인으로 돌아갑니다.");
+        window.location.replace("{% url 'myapp:list' %}");
+      } else {
+        return;
+      }
+    }
+  </script>
+</html>

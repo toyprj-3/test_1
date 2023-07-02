@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>지켜줄개 게시글 상세 페이지</title>
+        <link href="{% static 'css/More.css' %}" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <a href="{% url 'myapp:list' %}"
+                    > <img src="{% static 'images/logo.png' %}"
+                        alt="logo" id="logo"
+                /></a>
+        <div class="content">
+            <div class="title">{{ post.title }}</div>
+            <div class="middle">
+                <div class="info">
+                    <span id="name">{{ post.author }} |</span>
+                    <span id="update">{{ post.datetime }} |</span>
+                    <span id="view">100</span>
+                </div>
+                <form class="content_btn">
+                    <a href="{% url 'myapp:update' post.id %}"><input type="button" id="fix" value="수정하기"></input></a>
+                    <a href="{% url 'myapp:list'%}"><input type="button" id="back" value="뒤로가기"></input></a>
+                </form>
+            </div>
+            <hr id="line"/>
+            {% if post.image %}
+            <div id="img"><img src="{{ post.image.url }}" width = "30%" height="60%"></img></div>
+            {% endif %}
+            <div class="text">
+                {{ post.content }}
+            </div>
+        </div>
+    </body>
+</html>

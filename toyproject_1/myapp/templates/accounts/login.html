@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="{% static 'css/login.css' %}"  rel="stylesheet" type="text/css">                   
+    <title>로그인 페이지</title>
+</head>
+<body>
+    <div class="login-wrapper">
+        <img src="{% static 'images/logo.png' %}" class="logo" alt="지켜줄개">
+        <form actions="" method="POST" enctype="multi/part/for-data" id="login-form">
+        <!-- <form method="post" action="" id="login-form" onsubmit="return login()"> -->
+        {% csrf_token %}
+
+                <p>아이디</p>
+                {{ form.username}} 
+                <!-- <input type="text" id="ID" placeholder="ID"> -->
+                
+                <p>비밀번호</p>
+                {{form.password}}
+                <!-- <input type="password" id="password" placeholder="Password"> -->
+                
+                <br>
+                <input type="submit" value="로그인 하기">
+                <br>
+        </form>
+
+        <span>아이디 찾기</span> <span>|</span>
+        <span>비밀번호 찾기</span> <span>|</span>
+        <a href="{% url 'accounts:signup' %}">회원가입</a>     <!-- 회원가입 페이지 연결  -->
+        
+    </div>
+</body>
+</html>
