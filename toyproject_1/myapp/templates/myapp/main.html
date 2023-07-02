@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>지켜줄개</title>
+        <link href="{% static 'css/main.css' %}" type="text/css" rel="stylesheet" />
+        <script
+            src="https://kit.fontawesome.com/ca7a2d019a.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="nonfooter">
+            <header>
+                <a href="{% url 'myapp:list' %}"
+                    > <img src="{% static 'images/logo.png' %}"
+                        alt="logo"
+                /></a>
+            </header>
+            <nav>
+                <a href="{% url 'accounts:login' %}"
+                    ><div><i class="fa-solid fa-paw"></i> 로그인</div></a
+                >
+                <a href="{% url 'accounts:signup' %}"
+                    ><div><i class="fa-solid fa-paw"></i> 회원가입</div></a
+                >
+                <a href="{% url 'myapp:create' %}"
+                    ><div><i class="fa-solid fa-paw"></i> 글쓰기</div></a
+                >
+            </nav>
+            <div class="container">
+                {% for p in post_list %}
+                <div class="item">
+                    <a href="{{ p.get_absolute_url }}"><h1>{{ p.title }}</h1></a>
+                    <br />
+                    <h5 class="item-info">{{ p.author }} | {{ p.datetime }}</h5>
+                    <span class="likes">좋아요 <i class="fa-regular fa-heart"></i></span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <footer>
+            <p class="footer">&copy; 2023. 지켜줄개 ALL RIGHTS RESERVED.</p>
+        </footer>
+    </body>
+    <script>
+        window.onload = () => {
+            const like = document.querySelector(".fa-regular");
+
+            like.addEventListener("click", (e) => {
+                e.target.classList.toggle("fa-solid");
+            });
+        };
+    </script>
+</html>
