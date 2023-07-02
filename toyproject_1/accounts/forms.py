@@ -20,9 +20,6 @@ class UserCreateForm(UserBaseForm):
             'password',
             'password2',
         ]      
-        # widgets = {
-        #     'password': forms.PasswordInput(),
-        # }
         
 class SignUpForm(UserCreationForm):
 # class SignUpForm(BaseUserCreationForm):
