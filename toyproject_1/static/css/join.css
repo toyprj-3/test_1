@@ -47,7 +47,7 @@ p {
     margin-bottom: 4px;
 }
 
-#join-form > input{
+.input-field {
     width: 313px;
     height: 49px;
     padding: 0 10px;
@@ -75,7 +75,7 @@ hr {
     margin: 11px 0 22px 0;
 }
 
-#join-form > input[type="submit"]{
+.submit-button {
     display: block;
     color: #fff;
     font-size: 13px;
