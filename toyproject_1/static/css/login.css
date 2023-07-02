@@ -5,7 +5,6 @@
 }
 
 body{
-    height: 1024px;
     background: #F1EBE9;
     font-size: 11px;
     font-weight: 600;
@@ -14,6 +13,7 @@ body{
 
 .login-wrapper{
     width: 100%;
+    height:auto;
     background: rgba(247, 224, 163, 0.53);
     margin-top: 212px;
     padding: 40px;
