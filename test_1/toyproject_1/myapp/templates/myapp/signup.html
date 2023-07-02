@@ -1,0 +1,210 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>임시 signup 페이지 </h1>
+    <!-- http://127.0.0.1:8000/accounts/signup/ 으로 접속  -->
+
+    <!-- 사용자이름부터 전화번호까지 입력하도록 설정한 내용 출력 -->
+    <!-- <form actions="" method="POST" enctype="multi/part/for-data">
+        {% csrf_token %}
+        <div>{{ form.as_ul}} </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+
+</body>
+</html> -->
+
+
+
+<!-- 프론트에서 작업한 join.html, css 가져옴  -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="{% static 'css/join.css' %}"  rel="stylesheet" type="text/css">                   
+    <title>회원가입 페이지 signup.html </title>
+</head>
+<body>
+    <div class="join-wrapper">  
+        <img src="{% static 'images/logo.png' %}" class="logo" alt="지켜줄개">
+        
+        <form actions="" method="POST" enctype="multi/part/for-data" id="join-form">
+        {% csrf_token %}
+        <!-- <div>{{ form.as_p}} </div> -->
+        <!-- 전체를 보면 비번 입력창이 있는데 하나만 불러오질 못함. -->
+        <br><br>
+
+        <h3>회원가입</h3>
+        <div>
+            <p>이름</p>
+            <!-- {{ form.username}}  -->
+            <input type="text" id="name" placeholder="이름을 입력해주세요">
+        </div>
+
+        <div>
+            <p>이메일</p>
+            {{ form.email}} 
+            <!-- <input type="text" id="email" placeholder="예) likelion@gmail.com"> -->
+        </div>
+            
+        <div>
+            <p>아이디</p>
+            {{ form.username}} 
+            <!-- <input type="text" id="ID" placeholder="아이디를 입력해주세요"> -->
+        </div>
+            
+        <div>
+            <p>비밀번호</p>
+            <!-- 화면에 안나옴 ..  -->
+            {{form.password1}}
+            
+            <!-- <input type="password" id="password" placeholder="영문/숫자/특수문자를 조합 (10자 이상)"> -->
+        </div>
+            
+        <div>
+            <p>비밀번호 확인</p>
+            {{form.password2}}
+            <!-- <input type="password" id="password2" placeholder="비밀번호를 다시 한 번 입력해주세요"> -->
+        </div>
+        
+        <!-- <div> <h4>사용자 이름 </h4>
+            {{ form.username}} 
+        </div>
+        
+        <div><h4>사용자 이메일 </h4>
+            {{ form.email}} 
+        </div> -->
+        
+
+        <br>
+        <label for="agree-check">
+            <input type="checkbox" id="total-check" onclick="toggleCheckboxes()"> <span>전체 동의</span>
+            <hr>
+            <input type="checkbox" id="first-check" onclick="toggleTotalCheck()"> <span>서비스 이용약관 동의 (필수)</span>
+            <br>
+            <br>
+            <input type="checkbox" id="second-check" onclick="toggleTotalCheck()"> <span>개인정보 수집 및 이용 동의 (필수)</span>
+        </label>
+
+        <br><br>
+        <div>
+            <input type="submit" value="회원가입 하기">        
+        </div>
+
+        <!-- <form method="post" action="" id="join-form" onsubmit="return join()">
+            <h3>회원가입</h3>
+            <p>이름</p>
+            <input type="text" id="name" placeholder="이름을 입력해주세요">
+            <p>이메일</p>
+            <input type="text" id="email" placeholder="예) likelion@gmail.com">
+            <p>아이디</p>
+            <input type="text" id="ID" placeholder="아이디를 입력해주세요">
+            <p>비밀번호</p>
+            <input type="password" id="password" placeholder="영문/숫자/특수문자를 조합 (10자 이상)">
+            <p>비밀번호 확인</p>
+            <input type="password" id="password2" placeholder="비밀번호를 다시 한 번 입력해주세요">
+            
+            <br>
+            <label for="agree-check">
+                <input type="checkbox" id="total-check" onclick="toggleCheckboxes()"> <span>전체 동의</span>
+                <hr>
+                <input type="checkbox" id="first-check" onclick="toggleTotalCheck()"> <span>서비스 이용약관 동의 (필수)</span>
+                <br>
+                <br>
+                <input type="checkbox" id="second-check" onclick="toggleTotalCheck()"> <span>개인정보 수집 및 이용 동의 (필수)</span>
+            </label>
+            
+            <input type="submit" value="회원가입 하기">
+        </form> -->
+    </div>
+
+    <!-- 회원가입 정확히 입력하도록 js처리  -->
+    <script>
+        var totalCheckbox = document.getElementById('total-check');
+        var firstCheckbox = document.getElementById('first-check');
+        var secondCheckbox = document.getElementById('second-check');
+        
+        function toggleCheckboxes() {
+            if (totalCheckbox.checked) {
+                firstCheckbox.checked = true;
+                secondCheckbox.checked = true;
+            } else {
+                firstCheckbox.checked = false;
+                secondCheckbox.checked = false;
+            }
+        }
+
+        function toggleTotalCheck() {
+            if (firstCheckbox.checked && secondCheckbox.checked) {
+                totalCheckbox.checked = true;
+            } else {
+                totalCheckbox.checked = false;
+            }
+        }
+
+        /* function join() { 
+            var name = document.getElementById("name");
+            var email = document.getElementById("email");
+            var id = document.getElementById("ID");
+            var password = document.getElementById("password");
+            var password2 = document.getElementById("password2");
+
+            if (name.value == "") {
+                alert("이름을 입력해주세요.");
+                name.focus();
+                return false;
+            }
+            if (email.value == "") {
+                alert("이메일을 입력해주세요.");
+                email.focus();
+                return false;
+            }
+            if (id.value == "") {
+                alert("아이디를 입력해주세요.");
+                id.focus();
+                return false;
+            }
+            if (password.value == "") {
+                alert("비밀번호를 입력해주세요.");
+                password.focus();
+                return false;
+            }
+            if (password.value.length < 10) {
+                alert('비밀번호는 10자 이상이어야 합니다.');
+                return false;
+            }
+            if (password2.value == "") {
+                alert("비밀번호 확인을 입력해주세요.");
+                password.focus();
+                return false;
+            }
+            if (password2.value != password.value) {
+                alert("비밀번호가 일치하지 않습니다.");
+                password2.focus();
+                return false;
+            }
+            if (totalCheckbox.checked != true) {
+                alert("서비스 약관에 동의해주세요.")
+                totalCheckbox.focus();
+                return false;
+            } 
+
+            //회원가입 처리 코드
+
+            //회원가입 처리 이후
+            alert(name.value + "님 환영합니다. 회원가입이 완료되었습니다.")
+            window.location.href = "./login.html";
+            return false; */
+        //} 
+    </script>
+</body>
+</html>
