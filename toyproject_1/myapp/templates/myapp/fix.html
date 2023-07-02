@@ -54,7 +54,7 @@
           document.getElementById("title").value != ""
         ) {
           alert("수정되었습니다.");
-          window.location.replace("More.html");
+          window.location.replace("{% url 'myapp:detail' post.id %}");
         }
         if (document.getElementById("title").value == "") {
           alert("제목을 입력해 주세요.");
