@@ -22,7 +22,7 @@ def signup_view(request):
         if form.is_valid():             # (데이터유효성검사)
             # 회원가입처리 가능
             instance = form.save()
-            return redirect('index')        # 회원가입 완료시 노출 페이지 - 홈화면
+            return redirect('myapp:list')        # 회원가입 완료시 노출 페이지 - 홈화면
             
         else:
             # 리다이렉트
@@ -41,7 +41,7 @@ def login_view(request):
             # 비즈니스 로직 처리
             login(request, form.user_cache) # 로그인 되어있는 유저라면
             #응답
-            return redirect('index')
+            return redirect('myapp:list')
             
         else:
             # 비즈니스 로직 처리 - 로그인 실패
