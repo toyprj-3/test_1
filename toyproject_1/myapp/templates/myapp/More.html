@@ -23,8 +23,10 @@
                     <span id="view">100</span>
                 </div>
                 <form class="content_btn">
+                    {% if user.is_authenticated and user == post.author %}
                     <a href="{% url 'myapp:update' post.id %}"><input type="button" id="fix" value="수정하기"></input></a>
                     <a href="{% url 'myapp:delete' post.id %}"><input type="button" id="del" value="삭제하기"></input></a>
+                    {% endif %}
                     <a href="{% url 'myapp:list'%}"><input type="button" id="back" value="뒤로가기"></input></a>
                 </form>
             </div>

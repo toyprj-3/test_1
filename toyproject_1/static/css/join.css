@@ -5,8 +5,6 @@
 }
 
 body{
-    width: 1440px;
-    height: 1024px;
     background: #F1EBE9;
     font-size: 11px;
     font-weight: 600;
@@ -15,8 +13,8 @@ body{
 }
 
 .join-wrapper{
-    width: 686px;
-    height: 914px;
+    width: 60%;
+    height: auto;
     border-radius: 35px;
     background: rgba(247, 224, 163, 0.53);
     margin: 55px auto 55px;
