@@ -23,12 +23,19 @@
                 <a href="{% url 'accounts:login' %}"
                     ><div><i class="fa-solid fa-paw"></i> 로그인</div></a
                 >
+                <a href="./main.html"
+                ><div><i class="fa-solid fa-paw"></i> 로그아웃</div></a
+                >
+                
                 <a href="{% url 'accounts:signup' %}"
                     ><div><i class="fa-solid fa-paw"></i> 회원가입</div></a
                 >
+
+                {% if user.is_authenticated %}
                 <a href="{% url 'myapp:create' %}"
                     ><div><i class="fa-solid fa-paw"></i> 글쓰기</div></a
                 >
+                {% endif %}
             </nav>
             <div class="container">
                 {% for p in post_list %}
