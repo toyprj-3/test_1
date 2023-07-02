@@ -38,10 +38,12 @@ body {
 .content_btn {
     display: flex;
     flex-direction: row;
+    text-decoration: none;
     margin-right: 5%;
 }
 
 #fix {
+    display: inline-flex;
     color: #f7e0a3;
     border: none;
     padding: 10px;
@@ -49,10 +51,10 @@ body {
     text-decoration: none;
     font-size: 130%;
     background-color: #f09c67;
-    margin-right: 8%;
 }
 
 #del {
+    display: inline-flex;
     color: #f7e0a3;
     border: none;
     padding: 10px;
@@ -60,10 +62,10 @@ body {
     text-decoration: none;
     font-size: 130%;
     background-color: #f09c67;
-    margin-right: 8%;
 }
 
 #back {
+    display: inline-flex;
     color: #f7e0a3;
     border: none;
     padding: 10px;
@@ -71,6 +73,10 @@ body {
     text-decoration: none;
     font-size: 130%;
     background-color: #f09c67;
+}
+
+#fix_a {
+    margin-right: 5%;
 }
 
 #line {

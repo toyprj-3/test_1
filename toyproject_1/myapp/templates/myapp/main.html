@@ -27,7 +27,7 @@
                 {% endif %}
 
                 {% if user.is_authenticated %}
-                <a href="./main.html"
+                <a href="{% url 'accounts:logout' %}"
                 ><div><i class="fa-solid fa-paw"></i> 로그아웃</div></a
                 >
                 {% endif %}

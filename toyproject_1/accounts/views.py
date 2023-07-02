@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.contrib.auth.forms import UserCreationForm, BaseUserCreationForm, AuthenticationForm
 
 # from .forms import UserCreateForm, SignUpForms
@@ -47,3 +47,9 @@ def login_view(request):
             # 비즈니스 로직 처리 - 로그인 실패
             # 응답 
             return render(request, 'accounts/login.html', {'form': form})
+        
+
+def logout_view(request):
+    if request.user.is_authenticated:
+        logout(request)
+    return redirect('myapp:list')
