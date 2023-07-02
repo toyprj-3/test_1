@@ -23,7 +23,7 @@
                 <a href="./login.html"
                     ><div><i class="fa-solid fa-paw"></i> 로그인</div></a
                 >
-                <a href="#"
+                <a href="{% url 'accounts:signup' %}"
                     ><div><i class="fa-solid fa-paw"></i> 회원가입</div></a
                 >
                 <a href="{% url 'myapp:create' %}"
@@ -35,7 +35,7 @@
                 <div class="item">
                     <a href="{{ p.get_absolute_url }}"><h1>{{ p.title }}</h1></a>
                     <br />
-                    <h5 class="item-info">작성자 | {{ p.datetime }}</h5>
+                    <h5 class="item-info">{{ p.author }} | {{ p.datetime }}</h5>
                     <span class="likes">좋아요 <i class="fa-regular fa-heart"></i></span>
                 </div>
                 {% endfor %}
