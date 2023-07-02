@@ -19,12 +19,12 @@
         {% csrf_token %}
         <div id="w-title">
           <textarea
-            name="title"
-            id="title"
-            rows="1"
-            placeholder="제목을 입력해주세요"
-            required
-          ></textarea>
+          name="title"
+          id="title"
+          rows="1"
+          placeholder="제목을 입력해주세요"
+          required
+        ></textarea>
         </div>
 
         <hr />
@@ -41,6 +41,7 @@
         <div id="img">
           <input type="file" name="SelectFile" accept="image" />
         </div>
+        {{ form.author }}
 
         <div id="buttons">
           <div class="publish" onclick="publish()">
