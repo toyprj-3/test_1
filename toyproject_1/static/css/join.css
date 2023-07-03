@@ -6,7 +6,7 @@
 
 body{
     background: #F1EBE9;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
     font-family: Noto Sans Symbols;
 }
@@ -23,15 +23,12 @@ body{
 }
 
 .logo {
-    width: 142px;
-    height: 52px;
-    margin-right: 171px;
-    margin-top: 49px;
-    margin-bottom: 23px;
+    width: 250px;
+    margin-bottom:60px;
 }
 
 h3 {
-    font-size: 17px;
+    font-size: 20px;
     text-align: left;
     margin-left: 147px;
     margin-bottom: 22px;
@@ -120,7 +117,7 @@ label {
 }
 
 hr {
-    width: 315px;
+    width: 80%;
     height: 1px;
     border: none;
     background-color: #D4D4D4;
