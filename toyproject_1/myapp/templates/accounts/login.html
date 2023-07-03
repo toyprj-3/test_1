@@ -9,7 +9,9 @@
 </head>
 <body>
     <div class="login-wrapper">
-        <img src="{% static 'images/logo.png' %}" class="logo" alt="지켜줄개">
+        <a href="{% url 'myapp:list' %}"
+        > <img src="{% static 'images/logo.png' %}" class="logo"
+            alt="logo"/></a>
         <form actions="" method="POST" enctype="multi/part/for-data" id="login-form">
         <!-- <form method="post" action="" id="login-form" onsubmit="return login()"> -->
         {% csrf_token %}

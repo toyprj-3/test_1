@@ -6,7 +6,7 @@
 
 body{
     background: #F1EBE9;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
     font-family: Noto Sans Symbols;
     display: flex;
@@ -34,7 +34,7 @@ body{
 
 p {
     text-align: left;
-    margin-left: 623px;
+    margin-left: 632px;
     margin-bottom: 4px;
 }
 
@@ -51,7 +51,7 @@ p {
 
 #login-form > input[type="submit"]{
     color: #fff;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     background-color: #4C8492;
     border-style: none;
