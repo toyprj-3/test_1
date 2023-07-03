@@ -43,22 +43,39 @@
 <br/>
 
 * 로그인 페이지
+  
 <img width="1280" alt="KakaoTalk_20230703_194350606" src="https://github.com/toyprj-3/test_1/assets/101644134/7bb0ca3c-239d-48d6-b5b0-f4d515d89fd6">
+
 <br/><br/>
+
 * 회원가입 페이지
+
 <img width="1280" alt="KakaoTalk_20230703_194337489" src="https://github.com/toyprj-3/test_1/assets/101644134/d02c8026-8253-4382-ad7d-344c48e245a0">
+
 <br/><br/>
+
 * 게시판 페이지
+
 <img width="1280" alt="KakaoTalk_20230703_194215778" src="https://github.com/toyprj-3/test_1/assets/101644134/e000ea2a-ea8c-4662-b58a-e4bb55b6392f">
+
 <br/><br/>
+
 * 게시글 상세 페이지
+
 <img width="590" alt="KakaoTalk_20230703_192456998" src="https://github.com/toyprj-3/test_1/assets/101644134/ddbf8dcd-d4f0-4ab6-97ae-f020b3b03b62">
+
 <img width="1280" alt="KakaoTalk_20230703_194249391" src="https://github.com/toyprj-3/test_1/assets/101644134/9e12aaaf-c64c-4803-b5c9-09b8fc5c88b2">
+
 <br/><br/>
+
 * 게시글 작성 페이지
+
 <img width="1280" alt="KakaoTalk_20230703_194315703" src="https://github.com/toyprj-3/test_1/assets/101644134/a1831c95-f800-4a6e-87a9-37ef3f3eaf55">
+
 <br/><br/>
+
 * 게시글 수정페이지
+
 <img width="1280" alt="KakaoTalk_20230703_194302551" src="https://github.com/toyprj-3/test_1/assets/101644134/83835652-c2e4-4839-bf3b-ef4c9014212b">
 
   
