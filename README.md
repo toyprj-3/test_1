@@ -1,9 +1,8 @@
-![header](https://capsule-render.vercel.app/api?type=rect&text=지켜줄개&fontSize=60&fontColor=F2E0FE&animation=fadeIn) 
-<br/><br/><br/><br/>
+![지켜줄게_로고](https://github.com/toyprj-3/test_1/assets/101644134/7f54a9a5-813c-4002-8ca2-b7febc3512d6)<br/><br/><br/><br/>
+
 <h2> 23년도 덕성멋사 여름방학 토이프로젝트 v.1 </h2>
 <h1>유기견 임시 보호 일기 게시판 사이트  **지켜줄 개** 🐶</h1>
 
-![지켜줄게_로고](https://github.com/toyprj-3/test_1/assets/101644134/7f54a9a5-813c-4002-8ca2-b7febc3512d6)
 
 <br/><br/><br/><br/>
 <br/><br/><br/><br/>
