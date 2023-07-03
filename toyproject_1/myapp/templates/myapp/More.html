@@ -25,7 +25,7 @@
                 <form class="content_btn">
                     {% if user.is_authenticated and user == post.author %}
                     <a href="{% url 'myapp:update' post.id %}" id="fix_a"><input type="button" id="fix" value="수정하기" onclick="move_fix()"></input></a>
-                    <a href="{% url 'myapp:delete' post.id %}" id="fix_a"><input type="button" id="del" value="삭제하기" onclick="move_del()"></input></a>
+                    <a href="#" id="fix_a"><input type="button" id="del" value="삭제하기" onclick="move_del()"></input></a>
                     {% endif %}
                     <a href="{% url 'myapp:list'%}" id="fix_a"><input type="button" id="back" value="뒤로가기"></input></a>
                 </form>
@@ -42,13 +42,13 @@
             function move_fix() {
                 let res = confirm("게시글을 수정하시겠습니까?");
                 if (res == true) {
-                    window.location.href = "fix.html";
+                    window.location.href = "{% url 'myapp:update' post.id %}";
                 };
             }
             function move_del() {
                 let res = confirm("정말 삭제하시겠습니까?");
                 if (res == true) {
-                    //삭제
+                    window.location.href = "{% url 'myapp:delete' post.pk %}";
                 };
             }
         </script>
