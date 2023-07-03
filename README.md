@@ -34,7 +34,7 @@
 <br/>
 
 <div align="center">
-<img src="https://img.shields.io/badge/HTML5-3AA6B9?style=for-the-badge&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-FF9EAA?style=for-the-badge&logo=CSS3&logoColor=white"/>   <img src="https://img.shields.io/badge/JavaScripts-7AA874?style=for-the-badge&logo=Javascripts&logoColor=white"/>   <img src="https://img.shields.io/badge/DJango-19A7CE?style=for-the-badge&logo=DJango&logoColor=white"/>
+<img src="https://img.shields.io/badge/HTML5-3AA6B9?style=for-the-badge&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-FF9EAA?style=for-the-badge&logo=CSS3&logoColor=white"/>   <img src="https://img.shields.io/badge/JavaScripts-7AA874?style=for-the-badge&logo=Javascript&logoColor=white"/>   <img src="https://img.shields.io/badge/DJango-19A7CE?style=for-the-badge&logo=DJango&logoColor=white"/>
 </div>
 
 <br/><br/><br/>
