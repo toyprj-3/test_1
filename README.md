@@ -1,7 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&text=지켜줄개&fontSize=60&fontColor=F2E0FE) 
 
 <br/><br/><br/><br/>
-![header](https://capsule-render.vercel.app/api?type=slice&text=지켜줄개&fontSize=60&fontColor=F2E0FE&rotate=+30) 
+![header](https://capsule-render.vercel.app/api?type=slice&text=지켜줄개&fontSize=60&fontColor=F2E0FE&rotate=+15) 
 
 <br/><br/><br/><br/>
 ![header](https://capsule-render.vercel.app/api?type=rect&text=지켜줄개&fontSize=60&fontColor=F2E0FE) 
