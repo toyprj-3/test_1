@@ -1,15 +1,42 @@
-
-<br/><br/><br/><br/>
 ![header](https://capsule-render.vercel.app/api?type=rect&text=지켜줄개&fontSize=60&fontColor=F2E0FE&animation=fadeIn) 
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
 
-
-
-
-# test_1
-23년도 덕성멋사 여름방학 토이프로젝트 v.1
+## 23년도 덕성멋사 여름방학 토이프로젝트 v.1
+# 지켜줄 개
+<br/><br/><br/><br/>
 
 ------
 
+## 🧐 기획 의도 및 주제
+<br/>
+
+
+<br/><br/>
+## 📅 활동 및 개발 기간
+<br/>
+
+
+<br/><br/>
+## 🛠 담당 및 역할
+<br/>
+* 프론트 엔드 :
+* 백엔드 :
+
+  
+<br/><br/>
+## 📚 사용 스텍
+<br/>
+
+<div align="center">
+<img src="https://img.shields.io/badge/HTML5-3AA6B9?style=for-the-badge&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-FF9EAA?style=for-the-badge&logo=CSS3&logoColor=white"/> <img src="https://img.shields.io/badge/JavaScripts-7AA874?style=for-the-badge&logo=JavaScripts&logoColor=white"/> <img src="https://img.shields.io/badge/DJango-19A7CE?style=for-the-badge&logo=DJango&logoColor=white"/>
+</div>
+
+
+
+
+
+<br/><br/>
 ## 유의사항 
  **깃허브에 업로드 하는 과정 유의**
 </br></br></br></br></br>
