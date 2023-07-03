@@ -10,7 +10,9 @@
 </head>
 <body>
     <div class="join-wrapper">  
-        <img src="{% static 'images/logo.png' %}" class="logo" alt="지켜줄개">
+        <div id="logoid" onclick="cancel()">
+            <a href="{% url 'myapp:list' %}"> <img src="{% static 'images/logo.png' %}" class="logo" alt="logo"/></a>
+        </div>
         
         <form actions="/" method="POST" enctype="multi/part/for-data" id="join-form">
         {% csrf_token %}
@@ -84,6 +86,15 @@
                 totalCheckbox.checked = true;
             } else {
                 totalCheckbox.checked = false;
+            }
+        }
+
+        function cancel() {
+            var back = confirm("회원가입을 취소하시겠습니까?");
+            if (back) {
+                window.location.replace("{% url 'myapp:list' %}");
+            } else {
+                return;
             }
         }
 
